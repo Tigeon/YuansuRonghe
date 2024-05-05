@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17ac4bc5e314b044b2c9b6c629a1e95, type: 3}
+  m_Name: "\u95EA\u7535\u94FE"
+  m_EditorClassIdentifier: 
+  Name: "\u95EA\u7535\u94FE"
+  Icon: {fileID: 21300000, guid: 4605338a5a51383478a6b8eb3707e90c, type: 3}
+  RequiredElement:
+  - {fileID: 11400000, guid: dd2286f2c19a0064abecf48bbaa8f495, type: 2}
+  - {fileID: 11400000, guid: dd2286f2c19a0064abecf48bbaa8f495, type: 2}
+  Description: "\u53D1\u5C04\u4E00\u4E2A\u95EA\u7535\u9020\u621010\u4F24\u5BB3\uFF0C\u5F39\u8DF3\u4E09\u6B21\u6BCF\u6B21\u4F24\u5BB3\u51CF\u4E00"
+  chantTurns: 0
+  targetType: 1
+  targetPositions: -1
+  bounceCount: 3
+  damageReductionPerBounce: 1
+  Value: 9

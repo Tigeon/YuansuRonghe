@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e482182a21d5b4480196a76177b8c2, type: 3}
+  m_Name: "\u65E0\u5F62\u7F8E\u5FB7"
+  m_EditorClassIdentifier: 
+  Name: "\u65E0\u5F62\u7F8E\u5FB7"
+  Icon: {fileID: 21300000, guid: d62fc87d7e2c1d740b3afc4193abf641, type: 3}
+  RequiredElement:
+  - {fileID: 11400000, guid: 6a3c535dcdb6788439219d6e0a40ce89, type: 2}
+  - {fileID: 11400000, guid: 6a3c535dcdb6788439219d6e0a40ce89, type: 2}
+  Description: "\u5C55\u5F00\u7ED3\u754C\uFF1A\u6BCF\u6B21\u53D7\u5230\u653B\u51FB\u83B7\u5F97
+    4 \u70B9\u62A4\u7532\u3002"
+  chantTurns: 0
+  targetType: 0
+  targetPositions: 0
+  buff: {fileID: 11400000, guid: 922897b59932f4e4ca73b38395da9e1d, type: 2}

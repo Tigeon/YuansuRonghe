@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f08a796ec63e40afebb1d2f7f37be, type: 3}
+  m_Name: FieldBuff
+  m_EditorClassIdentifier: 
+  id: 2
+  buffName: "\u7ED3\u754C"
+  info: "\u53D7\u5230\u653B\u51FB\u65F6\uFF0C\u83B7\u5F974\u70B9\u62A4\u76FE\u3002"
+  Stacks: 1
+  image: {fileID: 21300000, guid: 8f6d58fd471ba8a45a4b681953e29c26, type: 3}
+  buffType: 3
+  owner: {fileID: 0}

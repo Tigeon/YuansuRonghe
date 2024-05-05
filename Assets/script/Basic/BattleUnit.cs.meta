@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2112b989a540c4348a58673cdfa69c07
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - UnitSpriteRenderer: {instanceID: 0}
+  - hpText: {instanceID: 0}
+  - armorText: {instanceID: 0}
+  - actionSpriteRenderer: {instanceID: 0}
+  - CurrentPosition: {instanceID: 0}
+  - UnitData: {instanceID: 0}
+  - AttackSprite: {fileID: 21300000, guid: 6a08ec4b334ea1c46b8171679417a74f, type: 3}
+  - DefendSprite: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+  - ADefendSprite: {fileID: 21300000, guid: 7b8e0222a006d824e930445c7d435ac3, type: 3}
+  - BuffSprite: {fileID: 21300000, guid: 844a1050d03ba5046bfb86af34a81e47, type: 3}
+  - SpeicalSprite: {fileID: 21300000, guid: 042fae2dd68bce044b8fbd1f26724a2d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
