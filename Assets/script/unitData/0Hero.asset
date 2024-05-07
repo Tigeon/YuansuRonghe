@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   unitName: Hero
-  maxHp: 15
+  maxHp: 64
   info: Hero
   Image: {fileID: 21300000, guid: 9e702ec4170345b42a8657647edeff6f, type: 3}
   actionList: []
