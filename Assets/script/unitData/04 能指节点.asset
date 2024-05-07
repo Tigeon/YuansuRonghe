@@ -17,4 +17,7 @@ MonoBehaviour:
   maxHp: 44
   info: "\u8BED\u8A00\u4E88\u610F\u4E49\uFF0C\u610F\u4E49\u4E88\u4EBA\u751F\uFF0C\u6211\u4EEC\u90FD\u6D3B\u5728\u8BED\u8A00\u4E4B\u4E2D"
   Image: {fileID: 21300000, guid: 7a627a08f333f884eabce23895b81001, type: 3}
-  actionList: []
+  actionList:
+  - {fileID: 11400000, guid: df99df81ca021524cb9fc2aeec3bab5e, type: 2}
+  - {fileID: 11400000, guid: 15ea443cd63b56543bc080bd0c66578b, type: 2}
+  - {fileID: 11400000, guid: 4d9a7baa50cca80499fb2204664f65c5, type: 2}

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: NULL
   m_EditorClassIdentifier: 
   id: -1
-  unitName: 0
-  maxHp: 0
+  unitName: "\u7A7A\u865A"
+  maxHp: 1
   info: 
   Image: {fileID: 0}
-  actionList: []
+  actionList:
+  - {fileID: 11400000, guid: 41d8ff2f004bd1345bc98ba5148658c8, type: 2}

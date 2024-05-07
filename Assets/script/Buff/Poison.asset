@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffName: "\u4E2D\u6BD2"
   info: "\u4E2D\u6BD2\u4E86\u6BCF\u56DE\u5408\u53D7\u5230\u7B49\u540C\u4E8E\u4E2D\u6BD2\u5C42\u6570\u7684\u4F24\u5BB3"
-  Stacks: 3
+  Stacks: 1
   image: {fileID: 21300000, guid: 1fe19ffae1abab0479d7d9716bcbbb9c, type: 3}
   buffType: 2
   owner: {fileID: 0}
