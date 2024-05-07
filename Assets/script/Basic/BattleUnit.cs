@@ -87,17 +87,18 @@ public abstract class BattleUnit : MonoBehaviour
                 return;
             }
         }
-
+        Buff buffClone = newBuff.Clone();
         // 如果没有找到同名的Buff，创建新的Buff图标
         GameObject icon = Instantiate(buffIconPrefab, BuffUIParent);
         BuffIcon buffIconScript = icon.GetComponent<BuffIcon>();
         if (buffIconScript != null)
         {
-            buffIconScript.Initialize(newBuff);
+            buffIconScript.Initialize(buffClone);
         }
         BuffUIList.Add(icon);
-        BuffList.Add(newBuff);
-        newBuff.OnApply(this);
+        
+        BuffList.Add(buffClone);
+        buffClone.OnApply(this);
     }
 
     public void UpdateBuffIcon()

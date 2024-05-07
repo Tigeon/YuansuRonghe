@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 [CreateAssetMenu(menuName = "Buffs/FieldBuff", fileName = "New FieldBuff")]
@@ -9,16 +10,25 @@ public class FieldBuff : Buff
 
     public override void OnApply(BattleUnit unit)
     {
-        owner = unit;
-        //无效化其他GlobeBuff
+        // 创建一个列表来存储需要移除的GlobeBuff
+        List<Buff> buffsToRemove = new List<Buff>();
+
+        // 查找所有的GlobeBuff
         foreach (Buff buff in unit.BuffList)
         {
             if (buff.GetBuffType() == buffType.Globe)
             {
-                unit.RemoveBuff(buff);
+                buffsToRemove.Add(buff);
             }
         }
+
+        // 移除找到的GlobeBuff
+        foreach (Buff buff in buffsToRemove)
+        {
+            unit.RemoveBuff(buff);
+        }
     }
+
 
     public override void OnRemove(BattleUnit unit)
     {

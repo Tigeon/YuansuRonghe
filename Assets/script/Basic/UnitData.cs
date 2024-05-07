@@ -11,13 +11,13 @@ public class UnitData : ScriptableObject
     [SerializeField] string unitName = "";
     [SerializeField] int maxHp;
     [TextArea(7,7)] [SerializeField] string info = "";    
-    [SerializeField] string ImageName = "";
+    [SerializeField] Sprite Image;
     [SerializeField] List<UnitAction> actionList = new List<UnitAction>();
 
     public int GetId(){ return id; }
     public string GetName(){ return unitName;}
     public int GetMaxHp(){ return maxHp;}
     public string GetInfo(){ return info; }
-    public string GetImageName(){ return ImageName; }
+    public Sprite GetImage(){ return Image; }
     public List<UnitAction> GetActionList(){ return actionList;}
 }

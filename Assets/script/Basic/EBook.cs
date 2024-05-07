@@ -82,7 +82,7 @@ public class EBook : MonoBehaviour
                 {
                     discardPile.Add(remaining);
                     // 假设存在将元素直接从手牌UI移动到弃牌UI的方法
-                    MoveElementUI(handTransform.GetChild(0), discardPileTransform);
+                    MoveChildren(handTransform, discardPileTransform);
                 }
                 toDiscard.Clear();
             }
@@ -106,12 +106,24 @@ public class EBook : MonoBehaviour
         }
     }
 
-    private void MoveElementUI(Transform element, Transform newParent)
+    public void MoveChildren(Transform sourceParent, Transform targetParent)
     {
-        element.SetParent(newParent);
-        element.localPosition = Vector3.zero; // 重置位置以适应新的父对象
-    }
+        int childCount = sourceParent.childCount;
 
+        // 使用循环来遍历所有子物体
+        for (int i = 0; i < childCount; i++)
+        {
+            // 因为每次从 sourceParent 移除一个子物体，sourceParent 的 childCount 就会减少，
+            // 所以始终取第一个索引为0的子物体
+            Transform child = sourceParent.GetChild(0);
+            child.SetParent(targetParent);
+
+            // 可选：如果你也想重置子物体的本地位置、旋转和缩放
+            child.localPosition = Vector3.zero;
+            child.localRotation = Quaternion.identity;
+            child.localScale = Vector3.one;
+        }
+    }
 
 
     private void EndTurn()

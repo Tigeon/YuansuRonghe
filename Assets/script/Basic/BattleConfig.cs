@@ -5,21 +5,20 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Battle Config")]
 public class BattleConfig : ScriptableObject
 {
-    [SerializeField] UnitData Enemy1;
-    [SerializeField] UnitData Enemy2;
-    [SerializeField] UnitData Enemy3;
-    [SerializeField] UnitData Enemy4;
+    [SerializeField] UnitData[] Enemies = new UnitData[4];
+
+    [SerializeField] Sprite Background;
 
     public UnitData GetEnemy(int x){
         switch(x){
             case 0:
-                return Enemy1;
+                return Enemies[0];
             case 1:
-                return Enemy2;
+                return Enemies[1];
             case 2:
-                return Enemy3;
+                return Enemies[2];
             case 3:
-                return Enemy4;
+                return Enemies[3];
             default:
                 return null;
         }

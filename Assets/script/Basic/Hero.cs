@@ -14,11 +14,8 @@ public class Hero : BattleUnit
         MaxHp = unitData.GetMaxHp();
         Hp = MaxHp;
         info = unitData.GetInfo();
-        UnitSpriteRenderer.sprite = Resources.Load<Sprite>($"Unit/{unitData.GetImageName()}");
-        //把英雄的数据显示在UI上,然后删掉原来的UI
-        var temp = hpText;
+        UnitSpriteRenderer.sprite = unitData.GetImage();
         hpText = UIManager.Instance.PlayerHpText;
-        Destroy(temp.gameObject);
         RefreshData();
     }
 
@@ -31,10 +28,15 @@ public class Hero : BattleUnit
 
     public override void OnAttacked(int damage)
     {
+        ExtraDamage = 0;
+        ExtraBonus = 0;
+        int totalDamage = damage;
         foreach (var buff in BuffList)
         {
             buff.OnAttacked(this);
         }
+        totalDamage += ExtraDamage;
+        totalDamage = totalDamage * (1 + ExtraBonus / 100);
 
         if (CurrentArmor > 0)
         {
@@ -51,7 +53,17 @@ public class Hero : BattleUnit
     // Taking damage and handling armor
     public override void TakeDamage(int damage)
     {
-        Hp -= damage;
+        
+        ExtraDamage = 0;
+        ExtraBonus = 0;
+        int totalDamage = damage;
+        foreach (var buff in BuffList)
+        {
+            buff.OnDamageTaken(this);
+        }
+        totalDamage += ExtraDamage;
+        totalDamage = totalDamage * (1 + ExtraBonus / 100);
+        Hp -= totalDamage;
         if (Hp <= 0)
         {
             Hp = 0;
@@ -99,6 +111,8 @@ public class Hero : BattleUnit
     public override void Attack(BattleUnit target, int baseDamage)
     {
         int totalDamage = baseDamage; // 假设有基础伤害值
+        ExtraDamage = 0;
+        ExtraBonus = 0;
 
         // 调用所有 Buff 的 OnAttack 方法
         foreach (Buff buff in BuffList)
@@ -106,10 +120,10 @@ public class Hero : BattleUnit
             buff.OnAttack(this); // 此处传递的是攻击者
         }
         totalDamage += ExtraDamage;
+        totalDamage = totalDamage * (1 + ExtraBonus / 100);
 
         // 实际造成伤害
         target.TakeDamage(totalDamage);
         
     }
-
 }

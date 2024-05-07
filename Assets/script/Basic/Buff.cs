@@ -8,7 +8,6 @@ public enum buffType{ Buff, Debuff, Const, Globe, Other};
 public abstract class Buff: ScriptableObject
 {
     [Header("Basic Info")]
-    [SerializeField] private int id;
     [SerializeField] private string buffName = "";
     [TextArea(7,7)][SerializeField] private string info = "";  // 详细描述
     [SerializeField] public int Stacks = 1;
@@ -16,7 +15,6 @@ public abstract class Buff: ScriptableObject
     [SerializeField] private buffType buffType;
     [SerializeField] public BattleUnit owner;   // 拥有该 Buff 的单位
 
-    public int GetID() { return id; }
     public string GetInfo() { return info; }
     public Sprite GetImage() { return image; }
     public string GetBuffName() { return buffName; }
@@ -30,4 +28,9 @@ public abstract class Buff: ScriptableObject
     public abstract void OnAttacked(BattleUnit unit);
     public abstract void AddStacks(int additionalStacks);
     public abstract void OnDamageTaken(BattleUnit unit);
+
+    public Buff Clone()
+    {
+        return Instantiate(this);
+    }
 }

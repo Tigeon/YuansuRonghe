@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class BleedBuff : Buff
 {
-    public BleedBuff(int initialStacks)
-    {
-        Stacks = initialStacks;
-    }
-
     public override void OnApply(BattleUnit unit)
     {
         // 可以在这里做一些初始化，比如根据初始化堆栈数来应用效果
@@ -38,8 +33,7 @@ public class BleedBuff : Buff
     // 调用这个方法来处理受到伤害时的流血效果
     public override void OnDamageTaken(BattleUnit unit)
     {
-        // 附加与流血层数相同的伤害
-        unit.TakeDamage(Stacks);
+        unit.ExtraDamage += Stacks;
     }
 
     // 每回合结束时调用这个方法来减半流血层数,最少减少1层

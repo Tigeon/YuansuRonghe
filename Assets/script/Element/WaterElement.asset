@@ -15,4 +15,4 @@ MonoBehaviour:
   elementType: 1
   elementName: Water
   description: "\u6C34\u5143\u7D20"
-  icon: {fileID: 21300000, guid: 3c9805506cdde8f44889fc034ab0097e, type: 3}
+  icon: {fileID: 21300000, guid: f898f83e8b9a07b428ec13abf566d0e7, type: 3}

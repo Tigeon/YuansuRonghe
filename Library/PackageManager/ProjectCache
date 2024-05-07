@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638505470680236342
-    m_Hash: 4201088596
+      ticks: 638505485159961538
+    m_Hash: 2126970162
   m_LockFileStatus:
     m_FilePath: D:/dream/element/game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638505470691585609
-    m_Hash: 302612039
+      ticks: 638505485159971528
+    m_Hash: 4131362063
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

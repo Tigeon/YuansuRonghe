@@ -7,7 +7,6 @@ public abstract class UnitAction : ScriptableObject
     public enum ActionType{ Attack = 0 , Defend = 1 , Buff = 2, DeBuff = 3, Speical = 4, Sleep = 5};
 
     [Header("BasicInfo")]
-    [SerializeField] public int id; 
     [TextArea(7, 7)] [SerializeField]public  string ActionDescription;
     [SerializeField] public ActionType actionType;
     [SerializeField] public float WaitSeconds;

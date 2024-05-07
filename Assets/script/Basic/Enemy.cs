@@ -19,7 +19,7 @@ public class Enemy : BattleUnit
         Hp = MaxHp;
         info = unitData.GetInfo();
         actionList = unitData.GetActionList();
-        UnitSpriteRenderer.sprite = Resources.Load<Sprite>($"Unit/{unitData.GetImageName()}");
+        UnitSpriteRenderer.sprite = unitData.GetImage();
         
 
         actionIcon.UpdateUI(actionList[currentActionIndex]);
@@ -135,6 +135,7 @@ public class Enemy : BattleUnit
             buff.OnAttack(this); // 此处传递的是攻击者
         }
         totalDamage += ExtraDamage;
+        totalDamage = totalDamage * (1 + ExtraBonus / 100);
 
         // 实际造成伤害
         target.TakeDamage(totalDamage);

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e6d51472d1e0046972bfca462684d6, type: 3}
   m_Name: Bleeding
   m_EditorClassIdentifier: Assembly-CSharp::BleedingBuff
-  id: 0
   buffName: "\u6D41\u8840"
-  info: "\u8FD9\u540D\u89D2\u8272\u6B63\u5728\u6D41\u8840\u3002\u6BCF\u6B21\u53D7\u5230\u4F24\u5BB3\u4F1A\u6838\u5916\u9644\u52A0\u4E00\u6B21\u7B49\u540C\u4E8E\u6D41\u8840\u5C42\u6570\u7684\u4F24\u5BB3"
+  info: "\u8FD9\u540D\u89D2\u8272\u6B63\u5728\u6D41\u8840\u3002\u6BCF\u6B21\u53D7\u5230\u4F24\u5BB3\u65F6\u4F1A\u989D\u5916\u589E\u52A0\u7B49\u540C\u4E8E\u6D41\u8840\u5C42\u6570\u7684\u4F24\u5BB3\u3002"
+  Stacks: 1
   image: {fileID: 21300000, guid: 38d5dde8fb892364296297a3a5c97a20, type: 3}
   buffType: 0
-  Stacks: 0
+  owner: {fileID: 0}
